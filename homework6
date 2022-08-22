@@ -1,0 +1,19 @@
+What is the average of the values in the rental_rate column in the film table?
+
+SELECt AVG (rental_rate) FROm film;
+
+How many of the movies in the film table start with the character 'C'?
+
+SELECT COUNT (title) FROM film
+WHERE title LIKE 'C%';
+
+Among the film in the film table, how many minutes is the longest (length) film with a rental_rate equal to 0.99?
+
+SELECT MAX (length) from FİLM
+WHERE rental_rate = 0.99;
+
+
+How many different replacement_cost values are there for the fim longer than 150 minutes in the film table?
+
+SELECT COUNt (DISTINCT replacement_cost ) from FILM
+WHERE lenght > 150;
