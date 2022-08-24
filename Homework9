@@ -1,0 +1,17 @@
+Write the INNER JOIN query where we can see the city and country names in the city table and the country table together.
+
+SELECT city, country_name FROM city
+INNER JOIN country ON city.country_id = country.id 
+
+Write the INNER JOIN query where we can see the payment_id (which is in the customer table and in the payment table) and
+the first_name and last_name names (which are in the customer table) together in a table.
+
+SELECT payment_id, first_name, last_name FROM customer
+INNER JOIN payment ON customer.customer_id = payment.customer_id
+
+
+Write the INNER JOIN query where we can see the rental_id (which is in the customer table and in the rental table) and
+the first_name and last_name names (which are in the customer table) together in a table.
+
+SELECT rental_id, first_name, last_name FROM customer
+INNER JOIN rental ON customer.rental_id = rental.rental_id
