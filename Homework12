@@ -1,0 +1,27 @@
+In the film table, the movie length is shown in the length column. How many movies are longer than the average film length?
+
+SELECT COUNT (*) FROM MOVIE
+WHERE lenght >
+(
+  SELECT AVE(lenght) FROM film
+);
+
+How many movies have the highest rental_rate in the movie table?
+
+SELECT COUNT(*) FROM film
+WHERE rental_rate =
+(
+  SELECT MAX(rental_rate) FROM film
+ );
+ 
+In the film table, list the films with the lowest rental rate and the lowest replacement cost. 
+
+SELECT rental_rate, replacement_cost FROM film
+WHERE rental_rate = 
+(
+  SELECT MIN(rental_rate) FROM film
+)
+AND replacement_cost = 
+(
+  SELECT MIN(replacement_cost) FROM film
+);
